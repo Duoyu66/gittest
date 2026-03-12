@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+       function Person(name,age,gender){
+    
+        this.name = name
+        this.age = age
+        this.gender = gender
+    }
+    let person1 = new Person("Tom",18,"男") 
+    console.log(person1);
+    const obj = {
+        name:"张三",
+        age:18,
+        school:"清华大学"
+    }
+    const {school} = obj
+
+    console.log("学校",school);
+    const arr =[1,2,3,4,5,6,7,8,9,10]
+    const [first,second,...rest] = arr;
+    console.log(first,second);
+    console.log(rest);
+    
+    //useEffect useLayoutEffect
+    
+
+ </script>
+</body>
+</html>

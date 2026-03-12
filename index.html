@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+  <div class="myBox">
+    我是div盒子
+    这是一段描述话语。
+  </div>
+  <script>
+    let a =[1,2,3,4]
+    for(let i=0;i<a.length;i++){
+        console.log("a",a);
+        
+    }
+    let sumNum = a.reduce((pre,cur)=>{
+      return pre+cur;
+    },0)
+console.log(sumNum);
+
+
+    let ab=[3,4,2,6,5,6,7,77,345,344,445,324,1234,34]
+    function mappao(arr){
+      for(let i=0;i<arr.length-1;i++){
+        for(let j=0;j<arr.length-i-1;j++){
+          if(arr[j]>arr[j+1]){
+          let temp= arr[j];
+          arr[j]=arr[j+1];
+          arr[j+1]=temp;
+          }
+        }
+      }
+      return arr;
+    }
+
+
+    
+    console.log("冒泡后的数据是",mappao(ab));
+    
+  </script>  
+</body>
+</html>
