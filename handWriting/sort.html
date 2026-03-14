@@ -24,6 +24,40 @@
   }
 
   console.log(maopao(arr))
+
+  //deepclone
+  function deepClone(obj){
+      if(!obj||typeof obj!=="object") return;
+      let newObj = Array.isArray(obj)?[]:{}
+      for(const key in obj){
+          if(obj.hasOwnProperty(key)){
+              newObj[key]=typeof obj[key]==="object"?deepClone(obj[key]):obj[key];
+          }
+      }
+return newObj;
+  }
+  let xiaoming={
+      age:18,
+      school:'清华',
+      class:{
+          class1:'xiaoming',
+          classmate:{
+              teacher:'王小鸡',
+          }
+      }
+  }
+  console.log(xiaoming);
+  console.log(deepClone(xiaoming));
+
+
+  //拍平
+  let testArr = [1,[2,3,[4,5,[6,34,342,[2]],[12],[25,[343],[67],[5],56]]]]
+  function flatten(arr){
+
+  }
+
+
+
 </script>
 </body>
 </html>
